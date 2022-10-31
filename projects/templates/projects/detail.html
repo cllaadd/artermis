@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {{ project.name }} - Projects
+{% endblock title %}
+{% block content %}
+    <main>
+        <div>
+            <h1>{{ project.name }}</h1>
+            <p>{{ project.description }}</p>
+            <a href="{% url 'edit_project' project.id %}">Edit</a>
+            <h2>Tasks</h2>
+            <p>
+                <a href="{% url 'create_task' %}">Create a new task</a>
+            </p>
+            {% if project.tasks.all|length > 0 %}
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Assignee</th>
+                            <th>Start date</th>
+                            <th>Due date</th>
+                            <th>Is completed</th>
+                            <th>Edit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for task in project.tasks.all %}
+                            <tr>
+                                <td>{{ task.name }}</td>
+                                <td>{{ task.assignee }}</td>
+                                <td>{{ task.start_date }}</td>
+                                <td>{{ task.due_date }}</td>
+                                <td>{{ task.is_completed|yesno:"yes,no" }}</td>
+                                <td>
+                                    <a href="{% url 'edit_task' task.id %}">Edit</a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            {% else %}
+                <p>This project has no tasks</p>
+            {% endif %}
+        </div>
+    </main>
+{% endblock content %}

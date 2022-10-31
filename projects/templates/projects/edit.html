@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Edit {{ project.name }}
+{% endblock title %}
+{% block content %}
+    <main>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button>Save</button>
+            <button type="button">
+                <a href="{% url 'delete_project' project.id %}">Delete</a>
+            </button>
+        </form>
+    </main>
+{% endblock content %}

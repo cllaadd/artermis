@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Modak&family=Open+Sans:ital,wght@0,400;0,500;1,500&family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+    display: flexbox;
+    background: cornflowerblue;
+    color: darkslateblue;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    display: flex;
+}
+
+
+th {
+    font-style: italic;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+td {
+    border: 2px dotted skyblue;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+}
+
+li {
+    margin-right: 10px;
+    margin-left: 0px;
+}
+
+main {
+    margin-left: 38px;
+}
+
+a:hover {
+    color: hotpink;
+}
