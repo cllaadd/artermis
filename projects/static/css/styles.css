@@ -15,6 +15,7 @@ select {
 html,
 body {
     background-color: cornflowerblue;
+    background-image: url("7a5e2b3a9b378e8dca93057aa5fb18e1 - Copy.jpg");
 }
 
 header nav ul {
@@ -60,6 +61,12 @@ table {
     width: 100%;
 }
 
+.project-detail p {
+    padding: 10px;
+    background-color: #e4d3fc;
+    border-radius: 20px;
+}
+
 .helptext {
     display: block;
     font-size: 80%;
@@ -69,7 +76,7 @@ table {
 .login-form,
 .signup-form {
     background-color: white;
-    border-radius: 4px;
+    border-radius: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     margin: auto;
     max-width: 400px;
@@ -79,7 +86,7 @@ table {
 .task-form,
 .project-form {
     background-color: white;
-    border-radius: 4px;
+    border-radius: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     margin: auto;
     max-width: 600px;
@@ -134,7 +141,7 @@ table {
 .project-list,
 .project-detail {
     background-color: white;
-    border-radius: 4px;
+    border-radius: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     margin: auto;
     max-width: 800px;
@@ -153,7 +160,7 @@ table {
 .my-tasks-list thead tr th,
 .project-list thead tr th,
 .project-detail thead tr th {
-    border-bottom: 2px solid #DEDEDE;
+    border-bottom: 2px solid #cac7ff;
 }
 
 .my-tasks-list tbody td:nth-child(2),
@@ -170,7 +177,16 @@ table {
 .my-tasks-list tbody :not(tr:last-child) td,
 .project-list tbody :not(tr:last-child) td,
 .project-detail tbody :not(tr:last-child) td {
-    border-bottom: 1px solid #DEDEDE;
+    border-bottom: 1px solid #cac7ff;
+}
+
+.edit-create {
+    text-align: right;
+    color: darkslateblue;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
 }
 
 a:hover {
@@ -179,6 +195,11 @@ a:hover {
 
 a {
     text-decoration: none;
+}
+
+table {
+    background-color: #e4d3fc;
+    border-radius: 20px;
 }
 
 /* th {

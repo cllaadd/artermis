@@ -6,10 +6,9 @@
 {% block content %}
     <main>
         <div class="project-list">
-            <h1>My Projects</h1>
-            <p>
-                <a href="{% url 'create_project' %}">Create a new project</a>
-            </p>
+            <h1>
+                My Projects <a href="{% url 'create_project' %}" class="edit-create">(create)</a>
+            </h1>
             {% if projects %}
                 <table>
                     <thead>

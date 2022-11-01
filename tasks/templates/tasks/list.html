@@ -6,7 +6,9 @@
 {% block content %}
     <main>
         <div class="my-tasks-list">
-            <h1>My Tasks</h1>
+            <h1>
+                My Tasks <a href="{% url 'create_task' %}" class="edit-create">(create)</a>
+            </h1>
             {% if tasks %}
                 <table>
                     <thead>
