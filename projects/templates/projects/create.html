@@ -5,8 +5,8 @@
 {% endblock title %}
 {% block content %}
     <main>
-        <h1>Create a new project</h1>
-        <div>
+        <div class="project-form">
+            <h1>Create a new project</h1>
             <form method="post">
                 {% csrf_token %}
                 {{ form.as_p }}

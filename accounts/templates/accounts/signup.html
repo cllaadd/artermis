@@ -5,8 +5,8 @@
 {% endblock title %}
 {% block content %}
     <main>
-        <h1>Signup</h1>
-        <div>
+        <div class="signup-form">
+            <h1>Signup</h1>
             <form method="post">
                 {% csrf_token %}
                 {{ form.as_p }}

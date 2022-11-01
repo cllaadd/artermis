@@ -5,13 +5,16 @@
 {% endblock title %}
 {% block content %}
     <main>
-        <form method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button>Save</button>
-            <button type="button">
-                <a href="{% url 'delete_project' project.id %}">Delete</a>
-            </button>
-        </form>
+        <div class="project-form">
+            <h1>Edit project</h1>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button>Save</button>
+                <button type="button">
+                    <a href="{% url 'delete_project' project.id %}">Delete</a>
+                </button>
+            </form>
+        </div>
     </main>
 {% endblock content %}
