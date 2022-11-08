@@ -1,7 +1,34 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from projects.models import Project
+from tasks.models import Task
 from projects.forms import ProjectForm
 from django.contrib.auth.decorators import login_required
+
+# import pandas as pd
+# from plotly.offline import plot
+# import plotly.express as px
+
+# @login_required
+# def show_timeline(request,id):
+#     project = get_object_or_404(Project, id=id)
+#     qs = Task.objects.filter(project)
+#     tasks_data = [
+#         {
+#             'Project': project.name,
+#             'Start': task.start_date,
+#             'Finish': task.due_date,
+#             'Responsible': task.assignee
+#         } for x in qs
+#     ]
+#     df = pd.DataFrame(tasks_data)
+#     fig = px.timeline(
+#         df, x_start="Start", x_end="Finish", y="Project", color="Responsible"
+#     )
+#     fig.update_yaxes(autorange="reversed")
+#     gantt_plot = plot(fig, output_type="div")
+#     context = {'plot_div': gantt_plot}
+#     return render(request, 'index.html', context)
+#  ask 92 how they made thier graph
 
 
 @login_required

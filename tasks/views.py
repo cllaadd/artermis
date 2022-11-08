@@ -56,3 +56,11 @@ def show_my_tasks(request):
         "tasks": tasks,
     }
     return render(request, "tasks/list.html", context)
+
+
+# @login_required
+# def complete_task(request, id):
+#     task = Task.objects.get(id=id)
+#     task.is_completed = True
+#     task.save()
+#     return redirect("show_my_tasks")
